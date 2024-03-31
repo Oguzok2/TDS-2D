@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-image: 'Thronefall3.webp';
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.start-btn{
+    display: flex;
+    width: 150px;
+    height: 100px;
+    background-color: #44D60B;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.settings-btn{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    background-color: #44D60B;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.name{
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-btn:hover{
+    display: shadow;
+    background-color:#3bad0e;
+    box-shadow: 5px 5px 5px black;
+}
