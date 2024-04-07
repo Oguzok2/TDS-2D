@@ -50,14 +50,38 @@ body{
     color: white;
 }
 
+.settings-name{
+    display: flex;
+    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
 .start-btn:hover{
     display: shadow;
     background-color:#3bad0e;
     box-shadow: 5px 5px 5px black;
 }
 
-.start-btn:focus{
+.start-btn:active{
     display: shadow;
-    box-shadow: 0px 0px 0px black;
-    background-color: #1d5009;
+    box-shadow: none;
+    background-color: #3b9817;
+}
+
+.settings-btn:hover{
+    display: shadow;
+    background-color:#3bad0e;
+    box-shadow: 5px 5px 5px black;
+}
+
+.settings-btn:active{
+    display: shadow;
+    box-shadow: none;
+    background-color: #3b9817;
+}
+
+.settings{
+    display: none
 }
