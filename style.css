@@ -55,4 +55,9 @@ body{
     background-color:#3bad0e;
     box-shadow: 5px 5px 5px black;
 }
-/* rwfsgu */
+
+.start-btn:focus{
+    display: shadow;
+    box-shadow: 0px 0px 0px black;
+    background-color: #1d5009;
+}
