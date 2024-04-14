@@ -3,6 +3,10 @@ let btnsstart = document.querySelector('.btns')
 let start_menu = document.querySelector('.startmenu')
 let start_btn = document.querySelector('.start-btn')
 let settings = document.querySelector('.settings')
+let sett_btn = document.querySelector('.settings-btn')
+let back = document.querySelector('.back')
+let game = document.querySelector('.game')
+let tower = document.querySelector('.tower')
 let myAudio = new Audio();
 myAudio.src = 'musictheme.mp3';
 myAudio.play();
@@ -15,15 +19,21 @@ start_btn.addEventListener('click', function(){
     })
 
     anime({
-        targets: '.settings',
-        translateY: -600,
-        duration: 500, 
+        targets: '.game',
+        translateY: -10,
+        duration: 500,
         easing: 'easeInElastic(1, .6)'
     })
 
     setTimeout(function(){
         start_menu.style.display = 'none'
-        settings.style.display = 'flex'
+        game.style.display = 'flex'
         body.style.background = '#00ffe0'
     }, 1000)  
+})
+
+tower.addEventListener('click', function(){
+    anime({
+        targets: '.tower',
+    })
 })
