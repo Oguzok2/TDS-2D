@@ -64,16 +64,37 @@ body{
 }
 
 .clicker{
+    display: flex;
     width: 33vw;
     height: 100vh;
     background-color: white;
     align-items: center;
-    padding-left: 40px;
     padding-top: 100px;
+    flex-direction: column;
 }
 
 .upgrade-shop{
     width: 33vw;
     height: 100vh;
     background-color: #b3d8a4;
+}
+
+.tower:active {
+    transform: scale(0.98,0.98);
+    cursor: pointer;
+}
+
+.autoclick{
+    height: 100px;
+    width: 100px;
+}
+
+.auto{
+    display: flex;
+    flex-direction: row;
+}
+
+.autoclick:active{
+    transform: scale(0.80,0.80);
+    cursor: pointer;
 }

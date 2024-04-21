@@ -7,9 +7,13 @@ let sett_btn = document.querySelector('.settings-btn')
 let back = document.querySelector('.back')
 let game = document.querySelector('.game')
 let tower = document.querySelector('.tower')
-let myAudio = new Audio();
-myAudio.src = 'musictheme.mp3';
-myAudio.play();
+let exp = document.querySelector('.exp')
+let autoclick = document.querySelector('.autoclick1')
+let autoclick2 = document.querySelector('.autoclick2')
+let castle = document.querySelector('.autoclick3')
+let city = document.querySelector('.autoclick4')
+let exp_count = 100000
+let clicks = 0
 start_btn.addEventListener('click', function(){
     anime({
         targets: '.startmenu',
@@ -33,7 +37,51 @@ start_btn.addEventListener('click', function(){
 })
 
 tower.addEventListener('click', function(){
-    anime({
-        targets: '.tower',
-    })
+    exp_count = exp_count + 1
+    exp.innerHTML = `EXP: ${exp_count}`
 })
+
+autoclick.addEventListener('click', function(){
+    if (exp_count >= 100){
+        exp_count = exp_count - 100
+        exp.innerHTML = `EXP: ${exp_count}`
+        clicks += 1
+    } else{
+        alert('Нужно купить скайрим для совершения операции')
+    }
+})
+
+autoclick2.addEventListener('click', function(){
+    if (exp_count >= 1000){
+        exp_count = exp_count - 1000
+        exp.innerHTML = `EXP: ${exp_count}`
+        clicks += 2
+    } else{
+        alert('Нужно купить скайрим для совершения операции')
+    }
+})
+
+castle.addEventListener('click', function(){
+    if (exp_count >= 10000){
+        exp_count = exp_count - 10000
+        exp.innerHTML = `EXP: ${exp_count}`
+        clicks += 10
+    } else{
+        alert('Нужно купить скайрим для совершения операции')
+    }
+})
+
+city.addEventListener('click', function(){
+    if (exp_count >= 100000){
+        exp_count = exp_count - 100000
+        exp.innerHTML = `EXP: ${exp_count}`
+        clicks += 1000
+    } else{
+        alert('Нужно купить скайрим для совершения операции')
+    }
+})
+
+setInterval(function(){
+    exp_count += clicks
+    exp.innerHTML = `EXP: ${exp_count}`
+}, 1000)
