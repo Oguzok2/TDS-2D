@@ -98,3 +98,11 @@ body{
     transform: scale(0.80,0.80);
     cursor: pointer;
 }
+
+.click-cost4{
+    margin-left: 30px
+}
+
+.click-cost5{
+    margin-left: 60px
+}
